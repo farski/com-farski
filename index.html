@@ -2,13 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-
+    
+    <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
+      ::selection {
+        color: white;
+        background: rgba(122, 91, 70, 0.73);
+      }
+      
       html {
         margin: 0;
         border: 0;
         padding: 0;
+        background: url(/2048.jpg) no-repeat center center fixed;
+        background-size: cover;
       }
 
       body {
@@ -16,63 +24,148 @@
         border: 0;
         padding: 0;
         font-size: 16px;
-        width: 920px;
+        font-family: 'Merriweather Sans', sans-serif;
+        color: #533202;
       }
-
+      
+      main {
+        width: 50%;
+        height: 100vh;
+        background: hsla(0, 100%, 100%, 0.92);
+      }
+      
+      h1 {
+        margin: 0 0 20px 20px;
+        padding: 0 300px 0 0;
+        letter-spacing: -1px;
+        font-weight: 100;
+        position: absolute;
+        left: 0;
+        bottom: 14px;
+      }
+      
+      nav {
+        width: 50px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      
+      nav a {
+        display: block;
+        font-family: 'FontAwesome';
+        text-decoration: none;
+        font-size: 40px;
+        line-height: 44px;
+        color: rgba(92, 53, 15, 1);
+        width: 50px;
+        text-align: center;
+        position: relative;
+        transition: color 0.65s;
+        margin: 7px 0;
+      }
+      
+      nav a div {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 25px;
+        margin-left: -25px;
+        overflow: hidden;
+      }
+      
+      nav a div span {
+        display: block;
+        width: 50px;
+        color: #DFD0BA;
+        transition: color 0.65s;
+      }
+      
+      nav a:hover {
+        color: white;
+        transition: color 0.15s;
+        text-shadow: 0px 0px 1px rgba(92, 53, 15, 1);
+      }
+      
+      nav a:hover div span {
+        position: relative;
+        color: rgba(92, 53, 15, 1);
+        transition: color 0.15s;
+      }
+      
       ul {
-        list-style: none;
-        margin: 125px 0 0;
-        border: 0;
+        list-style: none;        
+        margin: 0 0 19px 20px;
+        padding: 0;
+        letter-spacing: -1px;
+        font-weight: 100;
+        position: absolute;
+        left: 4px;
+        bottom: 0px;
+      }
+      
+      ul li {
+        display: inline-block;
+        margin: 0;
         padding: 0;
       }
-
-      ul li {
-        float: left;
-
-      }
-
+      
       ul a {
-        font-family: 'FontAwesome';
-        color: #000;
-        text-decoration: none;
-        font-size: 1.65em;
         display: block;
-        margin: 0;
-        border: 0;
-        padding: 12px 18px;
-        transition: all 0.15s;
+        border-right-width: 1px;
+        border-right-style: solid;
+        padding-right: 13px;
+        margin-right: 7px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: inherit;
+        font-weight: 100;
+        font-size: 13px;
+        line-height: 14px;
       }
-
-      ul a:hover {
-        color: #478ECC;
-      }
-
-      ul a.text {
-        font-family: 'Helvetica';
-        color: white;
-        background: #000;
-        margin: 6px;
-        padding: 6px 12px;
-      }
-
-      ul a.text:hover {
-        color: white;
-        background: #478ECC;
-      }
+      ul li:last-child a { border: none; }
     </style>
   </head>
   <body>
-    <ul>
-      <li><a href="https://www.twitter.com/farski"></a></li>
-      <li><a href="https://www.facebook.com/chris.kalafarski"></a></li>
-      <li><a href="https://www.github.com/farski"></a></li>
-      <li><a href="http://www.stopmophoto.com/"></a></li>
-      <li><a href="http://www.awholenother.com/"></a></li>
-      <li><a href="http://gps.farski.com/"></a></li>
-      <li><a href="http://www.last.fm/user/farski"></a></li>
-      <li><a href="http://bailey.farski.com" class="text">Bailey</a></li>
-      <li><a href="http://www.mondaymiles.club" class="text">Monday Miles</a></li>
-    </ul>
+    <main>
+      <h1>Chris Kalafarski</h1>
+      
+      <nav>
+        <a href="https://www.twitter.com/farski">
+          <div><span></span></div>
+        </a>
+        <a href="https://www.facebook.com/chris.kalafarski">
+          <div><span></span></div>
+        </a>
+        <a href="https://www.github.com/farski">
+          <div><span></span></div>
+        </a>
+        <a href="http://www.stopmophoto.com/">
+          <div><span></span></div>
+        </a>
+        <a href="http://www.last.fm/user/farski">
+          <div><span></span></div>
+        </a>
+        <a href="http://www.awholenother.com/">
+          <div><span></span></div>
+        </a>
+        <a href="http://gps.farski.com/">
+          <div><span></span></div>
+        </a>
+      </nav>
+      
+      <ul>
+        <li><a href="http://bailey.farski.com" class="text">Bailey</a></li>
+        <li><a href="http://www.mondaymiles.club" class="text">Monday Miles</a></li>
+      </ul>
+    </main>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -82,7 +175,6 @@
 
       ga('create', 'UA-27003567-1', 'auto');
       ga('send', 'pageview');
-
     </script>
   </body>
 </html>
