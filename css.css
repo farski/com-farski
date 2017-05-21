@@ -1,0 +1,82 @@
+html,
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url('/2048B.jpg');
+  background-size: cover;
+}
+
+body > a {
+  font-family: 'Merriweather Sans', sans-serif;
+  color: #353535;
+  font-size: 24px;
+  text-decoration: none;
+  margin: 0 0 0 60px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+body > a:hover {
+  color: #020202;
+}
+
+div {
+  display: flex;
+  width: 330px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 60px 0 0 60px;
+}
+
+div a {
+  text-decoration: none;
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 58px;
+  height: 58px;
+  margin: 5px 0;
+  position: relative;
+}
+
+div a::before {
+  width: 58px;
+  height: 58px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #8e8e8e;
+  font-family: 'FontAwesome';
+  font-size: 58px;
+  line-height: 58px;
+  text-align: center;
+  text-indent: 0%;
+}
+
+div a:hover::before { color: #080808; }
+
+div a[href='https://twitter.com/farski']::before { content: ''; }
+div a[href='https://www.facebook.com/chris.kalafarski']::before { content: ''; }
+div a[href='https://github.com/farski']::before { content: ''; }
+div a[href='https://www.instagram.com/farski/']::before { content: ''; }
+div a[href='https://www.last.fm/user/farski']::before { content: ''; }
+div a[href='https://www.strava.com/athletes/7070']::before { content: ''; }
+div a[href='https://www.linkedin.com/in/chriskalafarski']::before { content: ''; }
+div a[href='https://stackoverflow.com/users/618432/farski']::before { content: ''; }
+div a[href='https://steamcommunity.com/id/farski/']::before { content: ''; }
+div a[href='https://medium.com/@farski']::before { content: ''; }
+div a[href='https://www.meetup.com/members/11508551/']::before { content: ''; }
+div a[href='https://www.twitch.tv/farski']::before { content: ''; }
+div a[href='https://vimeo.com/farski']::before { content: ''; }
+div a[href='https://gitlab.com/farski']::before { content: ''; }
+div a[href='http://location.farski.com/']::before { content: ''; }
